@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "blockchin_backend": {
+      "main": "src/blockchin_backend/main.mo",
+      "type": "motoko"
+    },
+    "blockchin_frontend": {
+      "dependencies": [
+        "blockchin_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/blockchin_frontend/src/index.html"
+      },
+      "source": [
+        "src/blockchin_frontend/assets",
+        "dist/blockchin_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
